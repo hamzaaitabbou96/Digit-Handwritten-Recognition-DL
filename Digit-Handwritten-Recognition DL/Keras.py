@@ -5,7 +5,6 @@ Created on Sat Jul 11 15:40:53 2020
 @author: hamzaa_aitabbou
 """
 
-import  numpy  as np	
 import keras
 from keras.datasets import mnist
 
@@ -35,7 +34,7 @@ model.add(Flatten())
 model.add(Dense(units  =  128,  activation  =  'relu'))
 model.add(Dense(units  =  10,  activation  =  'softmax'))
 
-model.compile(optimizer  =  'adam',  loss  =  'categorical_crossentropy',  metrics  =  ['ac curacy'])
+model.compile(optimizer  =  'adam',  loss  =  'categorical_crossentropy',  metrics  =  ['accuracy'])
 model.fit(x_train,  y_train,batch_size=128, epochs=25, verbose=1,validation_data=(x_test,  y_test))
 
 

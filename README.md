@@ -1,4 +1,4 @@
-  # digit-handwritten-Paint
+  # Digit-Handwritten-Recognition DL
 
 This project is focused on segmenting digits from images and their classification using deep learning.
 

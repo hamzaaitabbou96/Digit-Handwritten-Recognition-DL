@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Jan 10 13:22:50 2020
+Created on Sat Jul 11 15:40:53 2020
 
-@author: Achraf
+@author: hamzaa_aitabbou
 """
 
 
@@ -11,9 +11,9 @@ from keras.preprocessing import image
 import numpy as np
 from keras.models import load_model
 
-loaded_model =load_model('modelfinal1.h5')
+loaded_model =load_model('models/model98.93.h5')
 
-image_path="testn.png"
+image_path="test2.png"
 
 img = image.load_img(image_path, target_size=(28, 28, 1), color_mode='grayscale')
 
@@ -24,12 +24,7 @@ img = image.img_to_array(img)
 img = np.expand_dims(img, axis=0)
 
 result=loaded_model.predict_classes(img)
+print('-_-')
 print(result)
 
 
-
-#image_path="testn.png"
-#img = image.load_img(image_path, target_size=(IMG_SIZE, IMG_SIZE))
-#plt.imshow(img)
-#img = np.expand_dims(img, axis=0)
-#result=loaded_model.predict_classes(img)
